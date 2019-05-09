@@ -1,4 +1,4 @@
-FROM docker://triumfmlutils/baseml:v0.2
+FROM triumfmlutils/baseml:v0.2
 
 LABEL maintainer="klaberinto@triumf.ca"
 
