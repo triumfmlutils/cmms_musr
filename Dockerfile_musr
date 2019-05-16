@@ -3,3 +3,17 @@ FROM triumfmlutils/baseml:v0.2
 LABEL maintainer="klaberinto@triumf.ca"
 
 RUN pip install bdata
+
+#Installing JupyterLab
+RUN pip install jupyterlab
+
+# Installing Jupyter Widgets
+RUN pip install ipywidgets
+RUN jupyter nbextension enable --py widgetsnbextension
+
+# Installing NODE JS required for JupyterLab Widgets Extension
+RUN apt install nodejs npm
+
+#Installing JypyterLab Widgets Extension
+#https://ipywidgets.readthedocs.io/en/stable/user_install.html#installing-the-jupyterlab-extension
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
