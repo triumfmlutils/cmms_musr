@@ -12,7 +12,7 @@ RUN pip install ipywidgets
 RUN jupyter nbextension enable --py widgetsnbextension
 
 # Installing NODE JS required for JupyterLab Widgets Extension
-RUN apt install --yes nodejs npm
+FROM node
 
 #Installing JypyterLab Widgets Extension
 #https://ipywidgets.readthedocs.io/en/stable/user_install.html#installing-the-jupyterlab-extension
