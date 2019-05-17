@@ -2,6 +2,10 @@ FROM triumfmlutils/baseml:v0.2
 
 LABEL maintainer="klaberinto@triumf.ca"
 
+#Install Connector/Python for MySQL for MuSR MUD database
+#https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html
+RUN pip install mysql-connector-python
+
 RUN pip install bdata
 
 #Installing JupyterLab
