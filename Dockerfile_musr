@@ -6,9 +6,10 @@ LABEL maintainer="klaberinto@triumf.ca"
 #https://dev.mysql.com/doc/connector-python/en/connector-python-installation-binary.html
 RUN pip install mysql-connector-python
 
+#Install bdata for mudpy for MUD file manipulation/reading
 RUN pip install bdata
 
-#Installing JupyterLab
+#Installing JupyterLab, if not already installed
 RUN pip install jupyterlab
 
 # Installing Jupyter Widgets
@@ -18,8 +19,8 @@ RUN jupyter nbextension enable --py widgetsnbextension
 # Installing NODE JS required for JupyterLab Widgets Extension
 # https://github.com/nodesource/distributions/blob/master/README.md#deb
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
-RUN sudo apt-get install -y nodejs
+RUN apt-get install -y nodejs
 
 #Installing JypyterLab Widgets Extension
 #https://ipywidgets.readthedocs.io/en/stable/user_install.html#installing-the-jupyterlab-extension
-RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38
