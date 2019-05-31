@@ -7,7 +7,7 @@ LABEL maintainer="klaberinto@triumf.ca"
 RUN pip install mysql-connector-python
 
 #Install bdata for mudpy for MUD file manipulation/reading
-RUN pip install bdata
+RUN pip install 'bdata==2.1.0'
 
 #Installing JupyterLab, if not already installed
 RUN pip install jupyterlab
