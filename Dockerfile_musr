@@ -27,4 +27,4 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38
 
 # Install pandoc for Jupyter Notebook Conversion
 # https://nbconvert.readthedocs.io/en/latest/install.html#installing-pandoc
-RUN sudo apt-get install pandoc
+RUN apt-get install pandoc
