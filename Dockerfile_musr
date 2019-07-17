@@ -33,8 +33,8 @@ RUN apt-get install -y pandoc && apt-get install -y texlive-xetex
 # Install TensorFlow (note: CPU-only, for GPU see Tensorflow website)
 # And Install keras
 RUN conda update --all
-RUN pip install tensorflow
-RUN pip install keras
+RUN pip install tensorflow --ignore-installed
+RUN pip install keras --ignore-installed
 
 # Install H5Py
 RUN pip install h5py
