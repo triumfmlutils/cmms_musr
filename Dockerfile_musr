@@ -28,3 +28,11 @@ RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.38
 # Install pandoc and XeTeX for Jupyter Notebook Export 
 # https://nbconvert.readthedocs.io/en/latest/install.html#installing-pandoc
 RUN apt-get install -y pandoc && apt-get install -y texlive-xetex
+
+# learn-data-science
+# Install TensorFlow (note: CPU-only, for GPU see Tensorflow website)
+# And Install keras
+RUN pip install tensorflow && pip install keras
+
+# Install H5Py
+RUN pip install h5py
